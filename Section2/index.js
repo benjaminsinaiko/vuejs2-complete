@@ -8,7 +8,9 @@ new Vue({
     counter: 0,
     x: 0,
     y: 0,
-    name: 'Ben'
+    name: 'Ben',
+    counter2: 0,
+    result: ''
   },
   methods: {
     sayHello: function() {
@@ -30,6 +32,11 @@ new Vue({
     },
     alertMe: function() {
       alert('Alert!');
+    }
+  },
+  computed: {
+    output: function() {
+      return this.counter2 > 5 ? 'Greater 5' : 'Smaller than 5';
     }
   }
 });

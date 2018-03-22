@@ -32,6 +32,11 @@
     <input type="text" v-model="name">
     <p>{{ name }}</p>
 
+    <button v-on:click="counter2++">Increase</button>
+    <button v-on:click="counter2--">Decrease</button>
+    <p>Counter: {{ counter2 }}</p>
+    <p>Result: {{ output }}</p>
+
   </div>
 </body>
 </html>
