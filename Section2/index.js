@@ -10,7 +10,8 @@ new Vue({
     y: 0,
     name: 'Ben',
     counter2: 0,
-    result: ''
+    result: '',
+    attachRed: false
   },
   methods: {
     sayHello: function() {
