@@ -16,7 +16,7 @@
     <p v-html='finishedLink'></p>
     <hr>
 
-    <button v-on:click="increase">Increase counter</button>
+    <button v-on:click="increase(2, $event)">Increase counter</button>
     <p>{{ counter }}</p>
     <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
   </div>
