@@ -34,6 +34,14 @@ new Vue({
       alert('Alert!');
     }
   },
+  watch: {
+    counter2: function(value) {
+      var vm = this;
+      setTimeout(function() {
+        vm.counter2 = 0;
+      }, 2000);
+    }
+  },
   computed: {
     output: function() {
       return this.counter2 > 5 ? 'Greater 5' : 'Smaller than 5';
