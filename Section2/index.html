@@ -14,6 +14,11 @@
     <p>{{ sayHelloWorld() }} - <a v-bind:href="link">Google</a></p>
     <hr>
     <p v-html='finishedLink'></p>
+    <hr>
+
+    <button v-on:click="increase">Increase counter</button>
+    <p>{{ counter }}</p>
+    <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
   </div>
 </body>
 </html>
