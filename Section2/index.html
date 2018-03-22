@@ -8,9 +8,12 @@
 </head>
 <body>
   <div id="app">
+    <h1 v-once>{{ title }}</h1>
     <p>{{ title }}</p>
     <p>{{ sayHello() }}</p>
     <p>{{ sayHelloWorld() }} - <a v-bind:href="link">Google</a></p>
+    <hr>
+    <p v-html='finishedLink'></p>
   </div>
 </body>
 </html>
