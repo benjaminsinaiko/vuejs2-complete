@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <p>{{ title }}</p>
+    <p>{{ sayHello() }}</p>
+    <p>{{ sayHelloWorld() }} - <a v-bind:href="link">Google</a></p>
+  </div>
+</body>
+</html>
