@@ -7,7 +7,8 @@ new Vue({
     finishedLink: '<a href="http://google.com">Google</a>',
     counter: 0,
     x: 0,
-    y: 0
+    y: 0,
+    name: 'Ben'
   },
   methods: {
     sayHello: function() {
