@@ -12,7 +12,8 @@ new Vue({
     counter2: 0,
     result: '',
     attachRed: false,
-    color: 'green'
+    color: 'gray',
+    width: 100
   },
   methods: {
     sayHello: function() {
@@ -52,6 +53,12 @@ new Vue({
       return {
         red: this.attachRed,
         blue: !this.attachRed
+      };
+    },
+    myStyle: function() {
+      return {
+        backgroundColor: this.color,
+        width: this.width + 'px'
       };
     }
   }

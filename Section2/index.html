@@ -39,11 +39,12 @@
     <p>Result: {{ output }}</p>
     <hr>
 
-    <div class="demo" v-on:click="attachRed = !attachRed" v-bind:class="divClasses"></div>
-    <div class="demo" v-bind:class="{red:attachRed}"></div>
-    <div class="demo" v-bind:class="[color, {red: attachRed}]"></div>
+    <div class="demo" :style="{backgroundColor: color}"></div>
+    <div class="demo" :style="myStyle"></div>
+    <div class="demo"></div>
     <hr>
     <input type="text" v-model="color">
+    <input type="text" v-model="width">
 
   </div>
 </body>
