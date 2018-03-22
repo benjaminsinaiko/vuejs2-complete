@@ -11,7 +11,8 @@ new Vue({
     name: 'Ben',
     counter2: 0,
     result: '',
-    attachRed: false
+    attachRed: false,
+    color: 'green'
   },
   methods: {
     sayHello: function() {
@@ -46,6 +47,12 @@ new Vue({
   computed: {
     output: function() {
       return this.counter2 > 5 ? 'Greater 5' : 'Smaller than 5';
+    },
+    divClasses: function() {
+      return {
+        red: this.attachRed,
+        blue: !this.attachRed
+      };
     }
   }
 });
