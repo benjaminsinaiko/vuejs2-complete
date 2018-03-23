@@ -14,22 +14,10 @@ new Vue({
     },
     attack: function() {
       this.monsterHealth -= this.calculateDamage(3, 10);
-
       if (this.checkWin()) {
         return;
       }
-
-      if (this.monsterHealth <= 0) {
-        alert('You won!');
-        this.gameIsRunning = false;
-        return;
-      }
       this.playerHealth -= this.calculateDamage(5, 12);
-
-      if (this.playerHealth <= 0) {
-        alert('You lost!');
-        this.gameIsRunning = false;
-      }
       this.checkWin();
     },
     specialAttack: function() {
