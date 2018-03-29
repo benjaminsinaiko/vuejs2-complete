@@ -1,9 +1,11 @@
 /* global Vue */
-var data = { status: 'Critical' };
+// var data = { status: 'Critical' };
 
 Vue.component('my-cmp', {
   data: function() {
-    return data;
+    return {
+      status: 'Critical'
+    };
   },
   template:
     '<p>Server Status: {{ status }} (<button @click="changeStatus">Change</button>)</p>',
