@@ -1,7 +1,7 @@
 /* global Vue */
 // var data = { status: 'Critical' };
 
-Vue.component('my-cmp', {
+var cmp = {
   data: function() {
     return {
       status: 'Critical'
@@ -14,7 +14,17 @@ Vue.component('my-cmp', {
       this.status = 'Normal';
     }
   }
-});
+};
 new Vue({
-  el: '#app'
+  el: '#app',
+  components: {
+    'my-cmp': cmp
+  }
+});
+
+new Vue({
+  el: '#app2',
+  components: {
+    'my-cmp2': cmp
+  }
 });
