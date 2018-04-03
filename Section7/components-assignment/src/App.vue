@@ -9,25 +9,28 @@
       </div>
       <hr>
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <servers></servers>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <server-details></server-details>
-        </div>
+        <servers></servers>
+        <server-details></server-details>
       </div>
       <hr>
-      <div class="row">
-        <div class="col-xs-12">
-          <footer>
-            <my-footer></my-footer>
-          </footer>
-        </div>
-      </div>
+      <my-footer></my-footer>
     </div>
 </template>
 
 <script>
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import Servers from './components/Servers.vue';
+import ServerDetails from './components/ServerDetails.vue';
+
+export default {
+  components: {
+    'my-header': Header,
+    servers: Servers,
+    'server-details': ServerDetails,
+    'my-footer': Footer
+  }
+};
 </script>
 
 <style>
