@@ -3,30 +3,24 @@
       <div class="row">
         <div class="col-xs-12">
           <header>
-            <h1>Server Status</h1>
+            <my-header></my-header>  
           </header>
         </div>
       </div>
       <hr>
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <ul class="list-group">
-            <li
-                    class="list-group-item"
-                    v-for="index in 5">
-                Server #{{ index }}
-            </li>
-          </ul>
+          <servers></servers>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p>Server Details are currently not updated</p>
+            <server-details></server-details>
         </div>
       </div>
       <hr>
       <div class="row">
         <div class="col-xs-12">
           <footer>
-            <p>All Servers are managed here</p>
+            <my-footer></my-footer>
           </footer>
         </div>
       </div>
