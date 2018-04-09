@@ -15,6 +15,12 @@ export default {
   },
   destroyed() {
     console.log('Destoryed!');
+  },
+  deactivated() {
+    console.log('Deactivatd!');
+  },
+  activated() {
+    console.log('Activated!');
   }
 };
 </script>
