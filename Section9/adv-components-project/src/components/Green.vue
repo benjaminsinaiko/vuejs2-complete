@@ -1,6 +1,9 @@
 <template>
-    <div>And I'm Green.</div>
+  <div>
+    <slot></slot>
+  </div>
 </template>
+
 
 <script>
 </script>

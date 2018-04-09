@@ -1,18 +1,18 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <br>
-                <button @click="selectedComponent= 'appBlue'" class="btn btn-primary">Load Blue Template</button>
-                <button @click="selectedComponent= 'appGreen'" class="btn btn-success">Load Green Template</button>
-                <button @click="selectedComponent= 'appRed'" class="btn btn-danger">Load Red Template</button>
-                <hr>
-                <component :is="selectedComponent">
-                  <p>Default Content</p>
-                </component>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <button @click="selectedComponent= 'appBlue'" class="btn btn-primary">Load Blue Template</button>
+        <button @click="selectedComponent= 'appGreen'" class="btn btn-success">Load Green Template</button>
+        <button @click="selectedComponent= 'appRed'" class="btn btn-danger">Load Red Template</button>
+        <hr>
+        <component :is="selectedComponent">
+          <p>This is Slot Content</p>
+        </component>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>

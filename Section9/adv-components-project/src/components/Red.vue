@@ -1,6 +1,9 @@
 <template>
-    <div>Don't forget me!  I'm Red.</div>
+  <div>
+    <slot></slot>
+  </div>
 </template>
+
 
 <script>
 </script>

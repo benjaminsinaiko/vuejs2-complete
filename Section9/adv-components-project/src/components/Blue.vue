@@ -1,5 +1,7 @@
 <template>
-    <div>I'm the Blue Component.</div>
+  <div>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
