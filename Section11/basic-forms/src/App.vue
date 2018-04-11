@@ -127,7 +127,7 @@
             </ul>
             <p>Gender: {{ gender }}</p>
             <p>Priority: {{ selectedPriority }}</p>
-            <p>Switched:</p>
+            <p>Switched: {{ dataSwitch }}</p>
           </div>
         </div>
       </div>
