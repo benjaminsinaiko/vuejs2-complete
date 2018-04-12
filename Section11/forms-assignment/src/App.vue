@@ -5,35 +5,18 @@
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
           <h1>User Info</h1>
           <hr>
+          <app-full-name v-model="userData.fullName"></app-full-name>
           <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input
-                type="text"
-                id="first-name"
-                class="form-control"
-                v-model="userData.firstName">
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input
-                type="text"
-                id="last-name"
-                class="form-control"
-                v-model="userData.lastName">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
+            <label>Email</label>
             <input 
                 type="text" 
-                id="email"
                 class="form-control"
                 v-model="userData.email">
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
+            <label>Password</label>
             <input 
                 type="password" 
-                id="password"
                 class="form-control"
                 v-model="userData.password">
           </div>
@@ -43,18 +26,16 @@
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
           <h3>Store Data?</h3>
           <hr>
-          <label for="true">
+          <label>
             <input
                 type="radio"
-                id="true"
-                value="true"
+                value="Yes"
                 v-model="storeData"> Yes
           </label>
-          <label for="false">
+          <label>
             <input
                 type="radio"
-                id="false"
-                value="false"
+                value="No"
                 v-model="storeData"> No
           </label>
         </div>
@@ -76,7 +57,7 @@
               <h4>Your Data</h4>
             </div>
             <div class="panel-body">
-              <p>Full Name: {{ userData.firstName + ' ' + userData.lastName }}</p>
+              <p>Full Name: {{ userData.fullName }}</p>
               <p>Mail: {{ userData.email }}</p>
               <p>Password: {{ userData.password }}</p>
               <p>Store in Database?: {{ storeData }}</p>
@@ -88,18 +69,22 @@
 </template>
 
 <script>
+import FullName from './FullName.vue';
+
 export default {
   data() {
     return {
       userData: {
-        firstName: '',
-        lastName: '',
+        fullName: 'Test Name',
         email: '',
         password: ''
       },
-      storeData: false,
+      storeData: 'Yes',
       isSubmitted: false
     };
+  },
+  components: {
+    appFullName: FullName
   },
   methods: {
     submitted() {
