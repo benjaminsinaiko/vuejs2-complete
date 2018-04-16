@@ -1,60 +1,51 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <h1>Directives Exercise</h1>
+      <!-- Exercise -->
+      <!-- Build a Custom Directive which works like v-on (Listen for Events) -->
+      <button v-customOn:click="clicked" class="btn btn-primary">Click Me</button>
+      <hr>
+      <div 
+        style="width: 100px; height: 100px; background-color: lightgreen"
+        v-customOn:mouseenter="mouseEnter"
+        v-customOn:mouseleave="mouseLeave">
+          
+      </div>
+
+    </div>
   </div>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  directives: {
+    customOn: {
+      bind(el, binding) {
+        // el.onclick = function() {
+        //   binding.value();
+        // };
+        const type = binding.arg;
+        const fn = binding.value;
+        el.addEventListener(type, fn);
+      }
+    }
+  },
+  methods: {
+    clicked() {
+      alert('I was clicked!');
+    },
+    mouseEnter() {
+      console.log('Mouse entered!');
+    },
+    mouseLeave() {
+      console.log('Mouse Leave!');
     }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
