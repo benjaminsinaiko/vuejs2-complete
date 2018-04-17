@@ -12,7 +12,11 @@
 import { fruitMixin } from './fruitMixin'
 
 export default {
-  mixins: [fruitMixin]
+  mixins: [fruitMixin],
+  created() {
+    console.log('Inside List Created Hook')
+    // Always created last, after Mixins
+  }
 };
 </script>
 
